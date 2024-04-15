@@ -1,0 +1,199 @@
+{
+	"info": {
+		"_postman_id": "8305acbe-d59a-469a-bfd7-2946fb307fb7",
+		"name": "Testing",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "32076497"
+	},
+	"item": [
+		{
+			"name": "Carbon Data Actual API --- Not APP",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://api.carbonintensity.org.uk/intensity/2017-09-18T12:00Z/2017-10-01T12:00Z",
+					"protocol": "https",
+					"host": [
+						"api",
+						"carbonintensity",
+						"org",
+						"uk"
+					],
+					"path": [
+						"intensity",
+						"2017-09-18T12:00Z",
+						"2017-10-01T12:00Z"
+					],
+					"query": [
+						{
+							"key": "asd",
+							"value": "sd",
+							"disabled": true
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get Request using date from and to",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/carbon_intensity/date_range/?from_date=2024-1-1&to_date=2024-3-14",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"carbon_intensity",
+						"date_range",
+						""
+					],
+					"query": [
+						{
+							"key": "from_date",
+							"value": "2024-1-1"
+						},
+						{
+							"key": "to_date",
+							"value": "2024-3-14"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get request for range of actual intensity",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/carbon_intensity/actual_range/?min_actual=61&max_actual=62",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"carbon_intensity",
+						"actual_range",
+						""
+					],
+					"query": [
+						{
+							"key": "min_actual",
+							"value": "61"
+						},
+						{
+							"key": "max_actual",
+							"value": "62"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get request for index type",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/carbon_intensity/index_type/?index=low",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"carbon_intensity",
+						"index_type",
+						""
+					],
+					"query": [
+						{
+							"key": "index",
+							"value": "low"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "All filter get request",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/carbon_intensity/?from_date=2024-1-1&min_value=100&intensity_index=low",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"carbon_intensity",
+						""
+					],
+					"query": [
+						{
+							"key": "from_date",
+							"value": "2024-1-1"
+						},
+						{
+							"key": "to_date",
+							"value": "2023-8-1",
+							"disabled": true
+						},
+						{
+							"key": "min_value",
+							"value": "100"
+						},
+						{
+							"key": "max_value",
+							"value": "50",
+							"disabled": true
+						},
+						{
+							"key": "intensity_index",
+							"value": "low"
+						},
+						{
+							"key": "min_forecast",
+							"value": "20",
+							"disabled": true
+						},
+						{
+							"key": "max_forecast",
+							"value": "120",
+							"disabled": true
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
